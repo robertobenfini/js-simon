@@ -4,7 +4,7 @@ let arrary_num_random = [];
 //contenitore array random
 let num_random = document.getElementById('num');
 
-let second = 30
+let second = 3
 
 //ciclo per popolare array random
 function create_num(min, max){
@@ -15,6 +15,7 @@ function create_num(min, max){
 }
 //richiamo funzione con parametri
 create_num(1, 100)
+console.log(create_num(1, 100))
 
 //metto l'array nel DOM
 num_random.innerText = arrary_num_random;
@@ -46,8 +47,8 @@ setTimeout(function(){
     //controllo numeri
     for(let i = 0; i<arrary_num_utente.length; i++){
     let numbers = arrary_num_utente[i]
-    
-    if(arrary_num_utente.includes(numbers)){
+
+    if(arrary_num_random.includes(numbers)){
         alert(`Questo numero è corretto: ${arrary_num_utente[i]}`)
         num_tot++
     }
